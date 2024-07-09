@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: gataria-envs
+  namespace: dev
+data:
+  MONGO_DATABASE: "dev"
+  CATAPI_URL: "https://api.thecatapi.com/v1/images/search"
+
+ 

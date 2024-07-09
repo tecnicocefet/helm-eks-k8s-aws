@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gataria-ingress
+  namespace: dev
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: dev.devopsdevopsquest.com.br
+    http:
+      paths:
+      - path: /backend-catalog
+        pathType: Prefix
+        backend:
+          service:
+            name: gataria-backend-catalog
+            port:
+              number: 80
+      - path: /backend-images
+        pathType: Prefix
+        backend:
+          service:
+            name: gataria-backend-images
+            port:
+              number: 80
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: gataria-frontend
+            port:
+              number: 80
