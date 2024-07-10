@@ -80,19 +80,21 @@ Helm instalado
 
 ### Obter lista de contextos Kubernetes
 
-### k config get-contexts
+ k config get-contexts
 
 ### Usar um contexto específico
 
-### k config use-context <nome-do-contexto>
+ k config use-context <nome-do-contexto>
 
 ### Atualizar o kubeconfig para um cluster EKS específico
 
-### aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>
+ aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>
 
 ### Criar um namespace
 
-### k create namespace <nome-do-namesspace>
+ k create namespace <nome-do-namesspace>
+
+O.B.S  k = um alias para kubectl
 
 ## Aplicar recursos Kubernetes
 
